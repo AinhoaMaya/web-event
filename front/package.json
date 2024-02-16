@@ -1,8 +1,8 @@
 {
   "name": "web-event",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web para un evento de actividades varias",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
