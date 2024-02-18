@@ -1,0 +1,53 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.cabecera {
+	width: 100%;
+	margin: 1.5rem;
+}
+
+.logo-cabecera{
+	height: 5rem;
+}
+
+.contenedor-imagen, .imagen-inicio {
+	width: 100%;
+}
+
+.titular-incio {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+.texto-inicio-descripcion {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+.galeria-inicio {
+	margin-top: 20px;
+}
+
+.galeria-inicio-imagenes{
+	border: 3px solid;
+	border-radius: 4px;
+	margin: 10px;
+	width: 20rem;
+	display: inline-block
+}
