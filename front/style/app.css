@@ -1,15 +1,21 @@
-body, ul, p {
+body{
 	margin: 0;
 	padding: 0;
 }
 
 header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 10vh;
-	max-height: 10vh;
-	width: 100%;
-	z-index: 5000;
-	box-sizing: border-box;
+  align-items: center;
+	background-color: hsla(0, 0%, 20%, 0.5);
+	opacity: 0.6;
+  box-sizing: border-box;
+  display: flex;
+  height: 10vh;
+  max-height: 10vh;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5000;
 }

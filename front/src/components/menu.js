@@ -14,11 +14,14 @@ class Menu extends HTMLElement {
         <style>
           .menu{
             width: 100%;
-            padding: 1.5rem;
           }
 
           .menu ul{
             display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            width: 100%;
           }
 
           .menu li{
@@ -26,49 +29,20 @@ class Menu extends HTMLElement {
           }
 
           .menu li a{
+            color: hsl(0 0% 100%);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
             text-decoration: none;
-            color: black;
             text-transform: capitalize;
-            margin-right: 2rem;
-          }
-
-          .menu li a:visited{
-            color: purple;
-          }
-
-
-          @media (hover: hover) {
-            
-          }
-
-          @media (min-width: 601px) {
-
-          }
-
-          @media (min-width: 601px) and (orientation: landscape) {
-
-          }
-
-          @media (min-width: 1025px) and (max-width: 1920px) {
-
-          }
-
-          @media (min-width: 1920px) {
-
           }
         </style>
-
-        <header>
-          <div class="menu">
-            <nav>
-              <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Horario</a></li>
-                <li><a href="#">Quiénes somos</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <nav class="menu">
+          <ul>
+            <li><a href="/">inicio</a></li>
+            <li><a href="/horarios">horarios</a></li>
+            <li><a href="/quienes-somos">quienes somos</a></li>
+          </ul>
+        </nav>
       `
   }
 }

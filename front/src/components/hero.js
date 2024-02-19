@@ -121,10 +121,10 @@ class Hero extends HTMLElement {
             }
           }
 
-          @media (min-width: 1920px) {
+          @media (min-width: 1921px) {
 
-          }
-        </style>
+        }
+      </style>
 
         <div class="hero">
           <div class="hero-image">
