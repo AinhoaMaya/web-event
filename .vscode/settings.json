@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.insertSpaces": false,
+  "editor.insertSpaces": true,
   "eslint.codeActionsOnSave.rules": null,
     "editor.codeActionsOnSave":{
       "source.fixAll.eslint": "explicit"
