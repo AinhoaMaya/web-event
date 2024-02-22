@@ -6,12 +6,11 @@ body{
 header{
   align-items: center;
 	background-color: hsla(0, 0%, 20%, 0.5);
-	opacity: 0.6;
   box-sizing: border-box;
   display: flex;
   height: 10vh;
   max-height: 10vh;
-  justify-content: space-between;
+  justify-content: center;
   left: 0;
   padding: 0 2rem;
   position: fixed;
