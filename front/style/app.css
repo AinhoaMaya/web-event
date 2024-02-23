@@ -8,9 +8,9 @@ header{
 	background-color: hsla(0, 0%, 20%, 0.5);
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   height: 10vh;
   max-height: 10vh;
-  justify-content: center;
   left: 0;
   padding: 0 2rem;
   position: fixed;
