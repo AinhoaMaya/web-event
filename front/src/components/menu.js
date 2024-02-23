@@ -38,6 +38,7 @@ class Menu extends HTMLElement {
         </style>
         <nav class="menu">
           <ul>
+            <li><a href="/inicio">inicio</a></li>
             <li><a href="/horarios">horarios</a></li>
             <li><a href="/quienes-somos">quienes somos</a></li>
           </ul>

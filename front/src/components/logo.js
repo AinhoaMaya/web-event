@@ -13,7 +13,7 @@ class Logo extends HTMLElement {
       /* html */`
         <style>
           .logo svg{
-            fill: hsl(295 55% 65%);
+            fill: hsl(300, 98%, 43%);
             height: 3rem;
             width: 3rem;
             display: flex;

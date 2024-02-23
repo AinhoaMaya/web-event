@@ -34,6 +34,7 @@ class AddButton extends HTMLElement {
             align-items: center;
             display: flex;
             justify-content: center;
+            position: relative;
           }
 
           .line {

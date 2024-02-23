@@ -12,7 +12,6 @@ class PlusMinusButton extends HTMLElement {
     this.shadow.innerHTML =
       /* html */`
         <style>
-
           .cart-products-buttons{
             height: 1.5rem;
           }
