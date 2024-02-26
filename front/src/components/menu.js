@@ -36,6 +36,7 @@ class Menu extends HTMLElement {
             text-transform: capitalize;
           }
         </style>
+        
         <nav class="menu">
           <ul>
             <li><a href="/inicio">inicio</a></li>
