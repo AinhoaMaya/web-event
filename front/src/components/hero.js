@@ -123,7 +123,7 @@ class Hero extends HTMLElement {
 
           @media (min-width: 1921px) {
 
-        }
+          }
       </style>
 
         <div class="hero">

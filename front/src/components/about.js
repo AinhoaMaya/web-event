@@ -32,7 +32,6 @@ class About extends HTMLElement {
             font-family: 'Poppins', sans-serif;
             text-align: justify;
           }
-          
         </style>
 
         <div class="about">
