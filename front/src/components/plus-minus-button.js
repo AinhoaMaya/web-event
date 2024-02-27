@@ -61,6 +61,21 @@ class PlusMinusButton extends HTMLElement {
           <button class="cart-products-buttons-add">+</button>
         </div>
       `
+    const buttonReduce = this.shadow.querySelector('.cart-products-buttons-reduce')
+    const input = this.shadow.querySelector('input[type="number"]')
+    const buttonAdd = this.shadow.querySelector('.cart-products-buttons-add')
+
+    buttonReduce.addEventListener('click', () => {
+      const currentValue = parseInt(input.value, 10)
+      if (currentValue > 0) {
+        input.value = currentValue - 1
+      }
+    })
+
+    buttonAdd.addEventListener('click', () => {
+      const currentValue = parseInt(input.value, 10)
+      input.value = currentValue + 1
+    })
   }
 }
 

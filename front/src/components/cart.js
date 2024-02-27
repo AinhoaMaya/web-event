@@ -135,6 +135,7 @@ class Cart extends HTMLElement {
             border: none;
             width: 25px;
             cursor: pointer;
+            background: none;
           }
 
           .cart-products-button-remove svg{
