@@ -27,7 +27,7 @@ class Notification extends HTMLElement {
       <style>
       h2 {
         font-family: 'Poppins', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       .notification {
@@ -77,7 +77,7 @@ class Notification extends HTMLElement {
           </div>
         </div>
       </div>
-      `
+    `
   }
 }
 

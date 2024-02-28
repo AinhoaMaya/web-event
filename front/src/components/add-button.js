@@ -93,6 +93,7 @@ class AddButton extends HTMLElement {
             }
           }
       </style>
+      
       <button class="add-button">
         <div class="button-icon">
           <span class="line"></span>
@@ -116,7 +117,7 @@ class AddButton extends HTMLElement {
       } else {
         document.dispatchEvent(new CustomEvent('message', {
           detail: {
-            text: 'Se ha eliminado del carrito'
+            text: 'Se ha eliminado correctamente'
           }
         }))
       }

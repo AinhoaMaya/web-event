@@ -418,20 +418,6 @@ class ProductGallery extends HTMLElement {
       </div>
     </section>
     `
-    /* const buttonAdd = this.shadow.querySelectorAll('add-button-component')
-
-    buttonAdd.forEach(button => {
-      button.addEventListener('click', () => {
-        if (!this.productAdded) {
-          alert('Producto añadido!')
-          this.productAdded = true
-        } else {
-          alert('Producto eliminado!')
-          this.productAdded = false
-        }
-      })
-    })
-    */
   }
 }
 
