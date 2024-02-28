@@ -106,6 +106,20 @@ class AddButton extends HTMLElement {
 
     button.addEventListener('click', function () {
       button.classList.toggle('active')
+
+      if (button.classList.contains('active')) {
+        document.dispatchEvent(new CustomEvent('message', {
+          detail: {
+            text: 'Se ha añadido correctamente'
+          }
+        }))
+      } else {
+        document.dispatchEvent(new CustomEvent('message', {
+          detail: {
+            text: 'Se ha eliminado del carrito'
+          }
+        }))
+      }
     })
   }
 }
