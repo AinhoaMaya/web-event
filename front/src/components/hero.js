@@ -179,6 +179,7 @@ class Hero extends HTMLElement {
         </div>
       `
 
+    // HTML - JS AL VUELO:
     // const hero = this.shadow.querySelector('.hero')
     // const heroImage = document.createElement('div')
     // heroImage.classList.add('hero-image')

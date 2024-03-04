@@ -3,10 +3,29 @@ class CategoryFilter extends HTMLElement {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.columns = this.getAttribute('columns') || 6
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
+  }
+
+  async loadData () {
+    this.data = [
+      {
+        title: 'Todos'
+      },
+      {
+        title: 'Familias'
+      },
+      {
+        title: 'Adultos'
+      },
+      {
+        title: 'Niños'
+      }
+    ]
   }
 
   render () {
@@ -30,39 +49,42 @@ class CategoryFilter extends HTMLElement {
             padding: 0 0 2rem;
           }
 
-          h1{
+          .title{
             display: flex;
             justify-content: center;
             font-family: 'Poppins', sans-serif;
           }
         </style>
 
-        <h1>¡Apúntate a nuestros talleres!</h1>
-        <div class="category-filters">
-          <div class="category-filter" data-category="todos">
-            <button>Todos</button>
+          <div class="category-filters">
+           
           </div>
-          <div class="category-filter" data-category="familias">
-            <button>Familias</button>
-          </div>
-          <div class="category-filter" data-category="niños">
-            <button>Niños</button>
-          </div>
-          <div class="category-filter" data-category="adultos">
-            <button>Adultos</button>
-          </div>
-        </div>
       `
-    const categoryFilters = this.shadow.querySelectorAll('.category-filter')
 
-    categoryFilters.forEach(categoryFilter => {
-      categoryFilter.addEventListener('click', () => {
+    const categoryFilters = this.shadow.querySelector('.category-filters')
+
+    this.data.forEach(category => {
+      console.log(category.title)
+      const categoryFilter = document.createElement('div')
+      categoryFilter.classList.add('category-filter')
+      categoryFilter.dataset.category = category.title.toLowerCase()
+      categoryFilters.appendChild(categoryFilter)
+
+      const button = document.createElement('button')
+      categoryFilter.appendChild(button)
+      button.textContent = category.title
+    })
+
+    categoryFilters.addEventListener('click', event => {
+      if (event.target.closest('.category-filter')) {
+        const categoryFilter = event.target.closest('.category-filter')
+
         document.dispatchEvent(new CustomEvent('filter-gallery', {
           detail: {
             category: categoryFilter.dataset.category
           }
         }))
-      })
+      }
     })
   }
 }

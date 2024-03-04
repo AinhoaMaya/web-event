@@ -2,10 +2,37 @@ class Product extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
+  }
+
+  async loadData () {
+    this.data = {
+      images: {
+        alt: 'son-sampol',
+        title: 'finca son sampol',
+        xs: {
+          src: './public/product-puppets-mobile.webp'
+        },
+        sm: {
+          src: './public/product-puppets-mobile.webp'
+        },
+        md: {
+          src: './public/product-puppets.webp'
+        },
+        lg: {
+          src: './public/product-puppets.webp'
+        }
+      },
+      title: 'Taller de marionetas',
+      subtitle: 'Lorem ipsum',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae?',
+      buttonText: 'Reserva tu plaza'
+    }
   }
 
   render () {
@@ -76,22 +103,25 @@ class Product extends HTMLElement {
           <div class="products-activity">
             <div class="products-image">
               <picture>
-                <img src="./public/product-puppets.webp" alt="son-sampol" title="finca son sampol">
+                <source srcset="${this.data.images.lg.src}" type="image/webp" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/webp" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/webp" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/webp" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
               </picture>
             </div>
             <div class="products-info">
               <div class="products-title-schedule">
-                <h1>Taller de marionetas | 10:30h</h1>
+                <h1>${this.data.title}</h1>
               </div>
               <div class="products-organizer">
-                <h2>Lorem ipsum</h2>
+                <h2>${this.data.subtitle}</h2>
               </div>
               <div class="products-description">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae?</p><br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae?</p>
+                <p>${this.data.description}</p>
               </div>
               <div class="products-button">
-                <button>Reserva tu plaza</button>
+                <button>${this.data.buttonText}</button>
               </div>
             </div>
           </div>
