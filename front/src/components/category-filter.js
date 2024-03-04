@@ -36,19 +36,34 @@ class CategoryFilter extends HTMLElement {
             font-family: 'Poppins', sans-serif;
           }
         </style>
+
         <h1>¡Apúntate a nuestros talleres!</h1>
         <div class="category-filters">
-          <div class="category-filter">
+          <div class="category-filter" data-category="todos">
+            <button>Todos</button>
+          </div>
+          <div class="category-filter" data-category="familias">
+            <button>Familias</button>
+          </div>
+          <div class="category-filter" data-category="niños">
             <button>Niños</button>
           </div>
-          <div class="category-filter">
-            <button>Jóvenes</button>
-          </div>
-          <div class="category-filter">
+          <div class="category-filter" data-category="adultos">
             <button>Adultos</button>
           </div>
         </div>
       `
+    const categoryFilters = this.shadow.querySelectorAll('.category-filter')
+
+    categoryFilters.forEach(categoryFilter => {
+      categoryFilter.addEventListener('click', () => {
+        document.dispatchEvent(new CustomEvent('filter-gallery', {
+          detail: {
+            category: categoryFilter.dataset.category
+          }
+        }))
+      })
+    })
   }
 }
 

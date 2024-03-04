@@ -2,13 +2,40 @@ class Hero extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
   }
 
-  render () {
+  async loadData () {
+    this.data = {
+      title: 'Encuentro Mosaico',
+      description: 'Un espacio para compartir, aprender y disfrutar',
+      buttonText: 'Ver horarios',
+      buttonLink: 'schedule.html',
+      images: {
+        alt: 'son-sampol',
+        title: 'finca son sampol',
+        xs: {
+          src: './public/son-sampol-mobile.webp'
+        },
+        sm: {
+          src: './public/son-sampol-mobile.webp'
+        },
+        md: {
+          src: './public/son-sampol.webp'
+        },
+        lg: {
+          src: './public/son-sampol.webp'
+        }
+      }
+    }
+  }
+
+  async render () {
     this.shadow.innerHTML =
       /* html */`
         <style>
@@ -129,26 +156,98 @@ class Hero extends HTMLElement {
         <div class="hero">
           <div class="hero-image">
             <picture>
-              <source srcset="./public/son-sampol-mobile.webp" type="image/webp" media="(max-width: 600px)">
-              <source srcset="./public/son-sampol.webp" type="image/webp" media="(min-width: 601px)">
-              <img src="./public/son-sampol.webp" alt="son-sampol" title="finca son sampol">
+              <source srcset="${this.data.images.lg.src}" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="${this.data.images.md.src}" type="image/webp" media="(min-width: 992px)">
+              <source srcset="${this.data.images.sm.src}" type="image/webp" media="(max-width: 601px)">
+              <source srcset="${this.data.images.xs.src}" type="image/webp" media="(max-width: 600px)">
+              <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
             </picture>
           </div>
           <div class="hero-content">
             <div class="hero-title">
-              <h1>Encuentro Mosaico</h1>
+              <h1>${this.data.title}</h1>
             </div>
             <div class="hero-description">
-              <p>Un espacio para compartir, aprender y disfrutar</p>
+              <p>${this.data.description}</p>
             </div>
             <div class="hero-button">
-              <a href="./jornadas.html">
-                <button>Ver horarios</button>
+              <a href="${this.data.buttonLink}">
+                <button>${this.data.buttonText}</button>
               </a>
             </div>
           </div>
         </div>
       `
+
+    // const hero = this.shadow.querySelector('.hero')
+    // const heroImage = document.createElement('div')
+    // heroImage.classList.add('hero-image')
+    // hero.appendChild(heroImage)
+
+    // const picture = document.createElement('picture')
+    // heroImage.appendChild(picture)
+
+    // const sourceLg = document.createElement('source')
+    // sourceLg.setAttribute('srcset', this.data.images.lg.src)
+    // sourceLg.setAttribute('type', 'image/webp')
+    // sourceLg.setAttribute('media', '(min-width: 1921px)')
+    // picture.appendChild(sourceLg)
+
+    // const sourceMd = document.createElement('source')
+    // sourceMd.setAttribute('srcset', this.data.images.md.src)
+    // sourceMd.setAttribute('type', 'image/webp')
+    // sourceMd.setAttribute('media', '(min-width: 1025px')
+    // picture.appendChild(sourceMd)
+
+    // const sourceSm = document.createElement('source')
+    // sourceSm.setAttribute('srcset', this.data.images.sm.src)
+    // sourceSm.setAttribute('type', 'image/webp')
+    // sourceSm.setAttribute('media', '(min-width: 601px)')
+    // picture.appendChild(sourceSm)
+
+    // const sourceXs = document.createElement('source')
+    // sourceXs.setAttribute('srcset', this.data.images.xs.src)
+    // sourceXs.setAttribute('type', 'image/webp')
+    // sourceXs.setAttribute('media', '(max-width: 600px)')
+    // picture.appendChild(sourceXs)
+
+    // const img = document.createElement('img')
+    // img.setAttribute('src', this.data.images.lg.src)
+    // img.setAttribute('alt', this.data.images.lg.alt)
+    // img.setAttribute('title', this.data.images.lg.title)
+    // picture.appendChild(img)
+
+    // const heroContent = document.createElement('div')
+    // heroContent.classList.add('hero-content')
+    // hero.appendChild(heroContent)
+
+    // const heroTitle = document.createElement('div')
+    // heroTitle.classList.add('hero-title')
+    // heroContent.appendChild(heroTitle)
+
+    // const title = document.createElement('h1')
+    // title.textContent = this.data.title
+    // heroTitle.appendChild(title)
+
+    // const heroDescription = document.createElement('div')
+    // heroDescription.classList.add('hero-description')
+    // heroContent.appendChild(heroDescription)
+
+    // const p = document.createElement('p')
+    // p.textContent = this.data.description
+    // heroDescription.appendChild(p)
+
+    // const heroButton = document.createElement('div')
+    // heroButton.classList.add('hero-button')
+    // heroContent.appendChild(heroButton)
+
+    // const linkButton = document.createElement('a')
+    // linkButton.setAttribute('href', this.data.buttonLink)
+    // heroButton.appendChild(linkButton)
+
+    // const button = document.createElement('button')
+    // button.textContent = this.data.buttonText
+    // linkButton.appendChild(button)
   }
 }
 

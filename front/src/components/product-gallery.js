@@ -7,13 +7,32 @@ class ProductGallery extends HTMLElement {
 
   async connectedCallback () {
     this.render()
+    document.addEventListener('filter-gallery', this.handleShowNotification.bind(this))
+  }
+
+  handleShowNotification (event) {
+    console.log(event.detail.category)
+    const products = this.shadow.querySelectorAll('.product')
+
+    if (event.detail.category === 'todos') {
+      products.forEach(product => {
+        product.classList.remove('hidden')
+      })
+    } else {
+      products.forEach(product => {
+        if (event.detail.category === product.dataset.category) {
+          product.classList.remove('hidden')
+        } else {
+          product.classList.add('hidden')
+        }
+      })
+    }
   }
 
   render () {
     this.shadow.innerHTML =
     /* html */`
     <style>
-
       a{
         height: 100%;
         text-decoration: none;
@@ -64,6 +83,10 @@ class ProductGallery extends HTMLElement {
         position: relative;
       }
 
+      .product.hidden {
+        display: none;
+      }
+
       .add-button-container {
         position: absolute;
         right: 1rem;
@@ -93,7 +116,7 @@ class ProductGallery extends HTMLElement {
 
       .product-title h3 {
         color: hsl(0, 0%, 100%);
-        font-family: 'Poppins', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 1.1rem;
         font-weight: 600;
         margin: 0;
@@ -103,7 +126,7 @@ class ProductGallery extends HTMLElement {
       .product-description p,
       .product-date span{
         color: hsl(0, 0%, 100%);
-        font-family: 'Poppins', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 0.9rem;
         font-style: italic;
         margin: 0;
@@ -122,7 +145,7 @@ class ProductGallery extends HTMLElement {
     </style>
 
     <section class="product-gallery">
-      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)">
+      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -143,7 +166,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)">
+
+      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -164,7 +188,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x2" style="background-color:hsl(209deg 100% 55%)">
+
+      <div class="product frame-1x2" style="background-color:hsl(209deg 100% 55%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -185,7 +210,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -206,7 +232,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-2x1" style="background-color:hsl(146deg 50% 45%)">
+
+      <div class="product frame-2x1" style="background-color:hsl(146deg 50% 45%)" data-category="familias">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -227,7 +254,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)">
+
+      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)" data-category="adultos">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -248,7 +276,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-3x1" style="background-color:hsl(9deg 100% 65%)">
+
+      <div class="product frame-3x1" style="background-color:hsl(9deg 100% 65%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -269,7 +298,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(38deg 100% 50%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(38deg 100% 50%)" data-category="adultos">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -290,7 +320,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)">
+
+      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -311,7 +342,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(209deg 100% 55%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(209deg 100% 55%)" data-category="adultos">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -332,7 +364,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(146deg 50% 45%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(146deg 50% 45%)" data-category="familias">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -353,7 +386,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)" data-category="familias">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -374,7 +408,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)">
+
+      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)" data-category="niños">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>
@@ -395,7 +430,8 @@ class ProductGallery extends HTMLElement {
           </div>
         </a>
       </div>
-      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)">
+
+      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)" data-category="familias">
         <div class="add-button-container">
           <add-button-component></add-button-component>
         </div>

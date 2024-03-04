@@ -2,10 +2,29 @@ class Menu extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
+  }
+
+  async loadData () {
+    this.data = [
+      {
+        title: 'inicio',
+        link: '/'
+      },
+      {
+        title: 'quiénes somos',
+        link: '/about.html'
+      },
+      {
+        title: 'horarios',
+        link: '/schedule.html'
+      }
+    ]
   }
 
   render () {
@@ -37,14 +56,22 @@ class Menu extends HTMLElement {
           }
         </style>
         
-        <nav class="menu">
-          <ul>
-            <li><a href="/inicio">inicio</a></li>
-            <li><a href="/quienes-somos">quiénes somos</a></li>
-            <li><a href="/horarios">horarios</a></li>
-          </ul>
-        </nav>
+        <nav class="menu"></nav>
       `
+
+    const menuContainer = this.shadow.querySelector('.menu')
+    const ul = document.createElement('ul')
+    menuContainer.appendChild(ul)
+
+    this.data.forEach(element => {
+      const li = document.createElement('li')
+      ul.appendChild(li)
+
+      const link = document.createElement('a')
+      link.setAttribute('href', element.link)
+      link.textContent = element.title
+      li.appendChild(link)
+    })
   }
 }
 

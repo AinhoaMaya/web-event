@@ -8,17 +8,19 @@ class Notification extends HTMLElement {
   connectedCallback () {
     this.render()
 
-    document.addEventListener('message', event => {
-      const notification = this.shadow.querySelector('.notification')
-      const notificationText = this.shadow.querySelector('.notification-title h2')
+    document.addEventListener('message', this.handleShowNotification.bind(this))
+  }
 
-      notificationText.textContent = event.detail.text
-      notification.classList.add('active')
+  handleShowNotification (event) {
+    const notification = this.shadow.querySelector('.notification')
+    const notificationText = this.shadow.querySelector('.notification-title h2')
 
-      setTimeout(() => {
-        notification.classList.remove('active')
-      }, 3000)
-    })
+    notificationText.textContent = event.detail.text
+    notification.classList.add('active')
+
+    setTimeout(() => {
+      notification.classList.remove('active')
+    }, 3000)
   }
 
   render () {
