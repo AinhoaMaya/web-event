@@ -3,11 +3,348 @@ class ProductGallery extends HTMLElement {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.products = []
+    this.data = []
   }
 
   async connectedCallback () {
-    this.render()
-    document.addEventListener('filter-gallery', this.handleShowNotification.bind(this))
+    await this.loadData()
+    await this.render()
+    await document.addEventListener('filter-gallery', this.handleShowNotification.bind(this))
+  }
+
+  async loadData () {
+    this.data = [
+      {
+        buttonLinkProduct: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      },
+      {
+        buttonLink: '/product/1',
+        images: {
+          alt: 'product',
+          title: 'product',
+          xs: {
+            src: './public/product.svg'
+          },
+          sm: {
+            src: './public/product.svg'
+          },
+          md: {
+            src: './public/product.svg'
+          },
+          lg: {
+            src: './public/product.svg'
+          }
+        },
+        title: 'Nuevas tecnologías y educación',
+        description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
+        schedule: '10:00 - 11:00'
+      }
+    ]
   }
 
   handleShowNotification (event) {
@@ -123,8 +460,7 @@ class ProductGallery extends HTMLElement {
         text-align: center;
       }
 
-      .product-description p,
-      .product-date span{
+      .product-description p, .product-date span{
         color: hsl(0, 0%, 100%);
         font-family: "Open Sans", sans-serif;
         font-size: 0.9rem;
@@ -152,7 +488,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -174,7 +516,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -196,7 +544,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -218,7 +572,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -240,7 +600,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -262,7 +628,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -284,7 +656,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -306,7 +684,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -328,7 +712,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -350,7 +740,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -372,7 +768,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -394,7 +796,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -416,7 +824,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -438,7 +852,13 @@ class ProductGallery extends HTMLElement {
         <a href="/product/1">
           <div class="product-details">
             <div class="product-image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chat</title><path d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+              <picture>
+                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
+                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
+                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
+                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
+                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
+              </picture>
             </div>
             <div class="product-title">
               <h3>Nuevas tecnologías y educación</h3>
@@ -454,6 +874,28 @@ class ProductGallery extends HTMLElement {
       </div>
     </section>
     `
+    const productsGallery = this.shadow.querySelector('.product-gallery')
+
+    this.data.forEach(category => {
+      const product = document.createElement('div')
+      product.classList.add('product')
+      productsGallery.appendChild(product)
+
+      const button = document.createElement('add-button-container')
+      product.appendChild(button)
+
+      const linkButtonProduct = document.createElement('a')
+      linkButtonProduct.setAttribute('href', this.data.buttonLinkProduct)
+      product.appendChild(linkButtonProduct)
+
+      const productDetails = document.createElement('div')
+      productDetails.classList.add('product-details')
+      linkButtonProduct.appendChild(productDetails)
+
+      const productImage = document.createElement('div')
+      productImage.classList.add('product-image')
+      productDetails.appendChild(productImage)
+    })
   }
 }
 
