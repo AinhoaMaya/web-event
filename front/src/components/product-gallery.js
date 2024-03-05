@@ -895,6 +895,60 @@ class ProductGallery extends HTMLElement {
       const productImage = document.createElement('div')
       productImage.classList.add('product-image')
       productDetails.appendChild(productImage)
+
+      const picture = document.createElement('picture')
+      productImage.appendChild(picture)
+
+      const sourceLg = document.createElement('source')
+      sourceLg.setAttribute('srcset', this.data.images.lg.src)
+      sourceLg.setAttribute('type', 'image/webp')
+      sourceLg.setAttribute('media', '(min-width: 1921px)')
+      picture.appendChild(sourceLg)
+
+      const sourceMd = document.createElement('source')
+      sourceMd.setAttribute('srcset', this.data.images.md.src)
+      sourceMd.setAttribute('type', 'image/webp')
+      sourceMd.setAttribute('media', '(min-width: 1025px')
+      picture.appendChild(sourceMd)
+
+      const sourceSm = document.createElement('source')
+      sourceSm.setAttribute('srcset', this.data.images.sm.src)
+      sourceSm.setAttribute('type', 'image/webp')
+      sourceSm.setAttribute('media', '(min-width: 601px)')
+      picture.appendChild(sourceSm)
+
+      const sourceXs = document.createElement('source')
+      sourceXs.setAttribute('srcset', this.data.images.xs.src)
+      sourceXs.setAttribute('type', 'image/webp')
+      sourceXs.setAttribute('media', '(max-width: 600px)')
+      picture.appendChild(sourceXs)
+
+      const img = document.createElement('img')
+      img.setAttribute('src', this.data.images.lg.src)
+      img.setAttribute('alt', this.data.images.lg.alt)
+      img.setAttribute('title', this.data.images.lg.title)
+      picture.appendChild(img)
+
+      const productTitle = document.createElement('div')
+      productTitle.classList.add('product-title')
+      productDetails.appendChild(productTitle)
+
+      const titleContent = document.createElement('h3')
+      productTitle.appendChild(titleContent)
+
+      const productDescription = document.createElement('div')
+      productDescription.classList.add('product-description')
+      productDetails.appendChild(productDescription)
+
+      const descriptionContent = document.createElement('p')
+      productDescription.appendChild(descriptionContent)
+
+      const productDate = document.createElement('div')
+      productDate.classList.add('product-description')
+      productDetails.appendChild(productDate)
+
+      const dateContent = document.createElement('span')
+      productDate.appendChild(dateContent)
     })
   }
 }
