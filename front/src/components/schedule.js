@@ -2,10 +2,58 @@ class Horario extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.products = []
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
+    await document.addEventListener('filter-gallery', this.handleShowNotification.bind(this))
+  }
+
+  async loadData () {
+    this.data = {
+      images: {
+        alt: 'schedule',
+        title: 'schedule',
+        xs: {
+          src: './public/schedule.webp'
+        },
+        sm: {
+          src: './public/schedule.webp'
+        },
+        md: {
+          src: './public/schedule.webp'
+        },
+        lg: {
+          src: './public/schedule.webp'
+        }
+      },
+      title: 'encuentro mosaico',
+      subtitle: 'Un espacio para compartir, aprender y disfrutar',
+      date: 'Llucmajor | 09:00h',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae'
+    }
+  }
+
+  handleShowNotification (event) {
+    console.log(event.detail.category)
+    const products = this.shadow.querySelectorAll('.schedule')
+
+    if (event.detail.category === 'todos') {
+      products.forEach(product => {
+        product.classList.remove('hidden')
+      })
+    } else {
+      products.forEach(product => {
+        if (event.detail.category === product.dataset.category) {
+          product.classList.remove('hidden')
+        } else {
+          product.classList.add('hidden')
+        }
+      })
+    }
   }
 
   render () {

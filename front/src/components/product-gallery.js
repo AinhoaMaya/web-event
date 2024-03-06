@@ -34,7 +34,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-1x1',
+        color: 'hsl(9deg 100% 65%)'
       },
       {
         buttonLink: '/product/1',
@@ -56,7 +59,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-2x2',
+        color: 'hsl(38deg 100% 50%)'
       },
       {
         buttonLink: '/product/1',
@@ -78,7 +84,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-1x2',
+        color: 'hsl(209deg 100% 55%)'
       },
       {
         buttonLink: '/product/1',
@@ -100,7 +109,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-1x1',
+        color: 'hsl(248deg 53% 57%)'
       },
       {
         buttonLink: '/product/1',
@@ -122,7 +134,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-2x1',
+        color: 'hsl(146deg 50% 45%)'
       },
       {
         buttonLink: '/product/1',
@@ -144,7 +159,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'familias',
+        size: 'frame-2x1',
+        color: 'hsl(300deg 75% 70%)'
       },
       {
         buttonLink: '/product/1',
@@ -166,7 +184,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'adultos',
+        size: 'frame-3x1',
+        color: 'hsl(9deg 100% 65%)'
       },
       {
         buttonLink: '/product/1',
@@ -188,7 +209,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-1x1',
+        color: 'hsl(38deg 100% 50%)'
       },
       {
         buttonLink: '/product/1',
@@ -210,7 +234,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'adultos',
+        size: 'frame-2x2',
+        color: 'hsl(209deg 100% 55%)'
       },
       {
         buttonLink: '/product/1',
@@ -232,7 +259,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'niños',
+        size: 'frame-1x1',
+        color: 'hsl(300, 75%, 70%)'
       },
       {
         buttonLink: '/product/1',
@@ -254,7 +284,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'adultos',
+        size: 'frame-1x1',
+        color: 'hsl(248deg 53% 57%)'
       },
       {
         buttonLink: '/product/1',
@@ -276,7 +309,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'familias',
+        size: 'frame-1x1',
+        color: 'hsl(300deg 75% 70%)'
       },
       {
         buttonLink: '/product/1',
@@ -298,7 +334,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'familias',
+        size: 'frame-2x1',
+        color: 'hsl(9deg 100% 65%)'
       },
       {
         buttonLink: '/product/1',
@@ -320,7 +359,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'adultos',
+        size: 'frame-1x1',
+        color: 'hsl(248deg 53% 57%)'
       },
       {
         buttonLink: '/product/1',
@@ -342,7 +384,10 @@ class ProductGallery extends HTMLElement {
         },
         title: 'Nuevas tecnologías y educación',
         description: 'Charla con el grupo "Por una adolescencia libre de móvil"',
-        schedule: '10:00 - 11:00'
+        schedule: '10:00 - 11:00',
+        category: 'adultos',
+        size: 'frame-1x1',
+        color: 'hsl(38deg 100% 50%)'
       }
     ]
   }
@@ -376,7 +421,7 @@ class ProductGallery extends HTMLElement {
         width: 100%;
       }
 
-      .product-gallery {
+      .product-gallery{
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -386,51 +431,52 @@ class ProductGallery extends HTMLElement {
         padding: 0.5rem;
       }
 
-      .frame-1x1 {
+      .frame-1x1{
         grid-column: span 1;
         grid-row: span 1;
       }
 
-      .frame-2x2 {
+      .frame-2x2{
         grid-column: span 2;
         grid-row: span 2;
       }
 
-      .frame-1x2 {
+      .frame-1x2{
         grid-column: span 1;
         grid-row: span 2;
       }
 
-      .frame-2x1 {
+      .frame-2x1{
         grid-column: span 2;
         grid-row: span 1;
       }
 
-      .frame-3x1 {
+      .frame-3x1{
         grid-column: span 3;
         grid-row: span 1;
       }
 
-      .product {
+      .product{
         align-items: center;
         border-radius: 1rem;
         display: flex;
         justify-content: center;
         padding: 1rem;
         position: relative;
+        background-color: hsl(248deg 53% 57%);
       }
 
-      .product.hidden {
+      .product.hidden{
         display: none;
       }
 
-      .add-button-container {
+      .add-button-container{
         position: absolute;
         right: 1rem;
         top: 1rem;
       }
 
-      .product-details {
+      .product-details{
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -445,13 +491,12 @@ class ProductGallery extends HTMLElement {
         align-items: center;
       }
 
-      .product-image svg {
-        fill: hsl(0, 0%, 100%);
+      img{
         height: 4rem;
         width: 4rem;
       }
 
-      .product-title h3 {
+      .product-title h3{
         color: hsl(0, 0%, 100%);
         font-family: "Open Sans", sans-serif;
         font-size: 1.1rem;
@@ -481,397 +526,7 @@ class ProductGallery extends HTMLElement {
     </style>
 
     <section class="product-gallery">
-      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x2" style="background-color:hsl(209deg 100% 55%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-2x1" style="background-color:hsl(146deg 50% 45%)" data-category="familias">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)" data-category="adultos">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-3x1" style="background-color:hsl(9deg 100% 65%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(38deg 100% 50%)" data-category="adultos">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-2x2" style="background-color:hsl(38deg 100% 50%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(209deg 100% 55%)" data-category="adultos">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(146deg 50% 45%)" data-category="familias">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(248deg 53% 57%)" data-category="familias">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-2x1" style="background-color:hsl(300deg 75% 70%)" data-category="niños">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="product frame-1x1" style="background-color:hsl(9deg 100% 65%)" data-category="familias">
-        <div class="add-button-container">
-          <add-button-component></add-button-component>
-        </div>
-        <a href="/product/1">
-          <div class="product-details">
-            <div class="product-image">
-              <picture>
-                <source srcset="${this.data.images.lg.src}" type="image/svg+xml" media="(min-width: 1200px)">
-                <source srcset="${this.data.images.md.src}" type="image/svg+xml" media="(min-width: 992px)">
-                <source srcset="${this.data.images.sm.src}" type="image/svg+xml" media="(max-width: 601px)">
-                <source srcset="${this.data.images.xs.src}" type="image/svg+xml" media="(max-width: 600px)">
-                <img src="${this.data.images.lg.src}" alt="${this.data.images.alt}" title="${this.data.images.title}">
-              </picture>
-            </div>
-            <div class="product-title">
-              <h3>Nuevas tecnologías y educación</h3>
-            </div>
-            <div class="product-description">
-              <p>Charla con el grupo "Por una adolescencia libre de móvil"</p>
-            </div>
-            <div class="product-date">
-              <span>10:00 - 11:00</span>
-            </div>
-          </div>
-        </a>
-      </div>
+      
     </section>
     `
     const productsGallery = this.shadow.querySelector('.product-gallery')
@@ -879,13 +534,17 @@ class ProductGallery extends HTMLElement {
     this.data.forEach(category => {
       const product = document.createElement('div')
       product.classList.add('product')
+      product.classList.add(category.size)
       productsGallery.appendChild(product)
+      product.setAttribute('data-category', category.category)
+      product.style.backgroundColor = category.color
 
-      const button = document.createElement('add-button-container')
+      const button = document.createElement('add-button-component')
+      button.classList.add('add-button-container')
       product.appendChild(button)
 
       const linkButtonProduct = document.createElement('a')
-      linkButtonProduct.setAttribute('href', this.data.buttonLinkProduct)
+      linkButtonProduct.setAttribute('href', category.buttonLinkProduct)
       product.appendChild(linkButtonProduct)
 
       const productDetails = document.createElement('div')
@@ -900,33 +559,33 @@ class ProductGallery extends HTMLElement {
       productImage.appendChild(picture)
 
       const sourceLg = document.createElement('source')
-      sourceLg.setAttribute('srcset', this.data.images.lg.src)
+      sourceLg.setAttribute('srcset', category.images.lg.src)
       sourceLg.setAttribute('type', 'image/webp')
       sourceLg.setAttribute('media', '(min-width: 1921px)')
       picture.appendChild(sourceLg)
 
       const sourceMd = document.createElement('source')
-      sourceMd.setAttribute('srcset', this.data.images.md.src)
+      sourceMd.setAttribute('srcset', category.images.md.src)
       sourceMd.setAttribute('type', 'image/webp')
       sourceMd.setAttribute('media', '(min-width: 1025px')
       picture.appendChild(sourceMd)
 
       const sourceSm = document.createElement('source')
-      sourceSm.setAttribute('srcset', this.data.images.sm.src)
+      sourceSm.setAttribute('srcset', category.images.sm.src)
       sourceSm.setAttribute('type', 'image/webp')
       sourceSm.setAttribute('media', '(min-width: 601px)')
       picture.appendChild(sourceSm)
 
       const sourceXs = document.createElement('source')
-      sourceXs.setAttribute('srcset', this.data.images.xs.src)
+      sourceXs.setAttribute('srcset', category.images.xs.src)
       sourceXs.setAttribute('type', 'image/webp')
       sourceXs.setAttribute('media', '(max-width: 600px)')
       picture.appendChild(sourceXs)
 
       const img = document.createElement('img')
-      img.setAttribute('src', this.data.images.lg.src)
-      img.setAttribute('alt', this.data.images.lg.alt)
-      img.setAttribute('title', this.data.images.lg.title)
+      img.setAttribute('src', category.images.lg.src)
+      img.setAttribute('alt', category.images.lg.alt)
+      img.setAttribute('title', category.images.lg.title)
       picture.appendChild(img)
 
       const productTitle = document.createElement('div')
@@ -934,6 +593,7 @@ class ProductGallery extends HTMLElement {
       productDetails.appendChild(productTitle)
 
       const titleContent = document.createElement('h3')
+      titleContent.textContent = category.title
       productTitle.appendChild(titleContent)
 
       const productDescription = document.createElement('div')
@@ -941,6 +601,7 @@ class ProductGallery extends HTMLElement {
       productDetails.appendChild(productDescription)
 
       const descriptionContent = document.createElement('p')
+      descriptionContent.textContent = category.description
       productDescription.appendChild(descriptionContent)
 
       const productDate = document.createElement('div')
@@ -948,6 +609,8 @@ class ProductGallery extends HTMLElement {
       productDetails.appendChild(productDate)
 
       const dateContent = document.createElement('span')
+      productDate.classList.add('product-date')
+      dateContent.textContent = category.schedule
       productDate.appendChild(dateContent)
     })
   }
