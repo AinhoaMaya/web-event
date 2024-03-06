@@ -40,69 +40,133 @@ class Horario extends HTMLElement {
           title: 'Nuevas tecnologías y educación',
           date: '09:00h - 10:00h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 1'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '10:30h - 11:30h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 2'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '11:15h - 11:45h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 3'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '12:00h - 12:30h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 4'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '12:20h - 13:00h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 5'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '12:45h - 13:45h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 6'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '13:15h - 13:50h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 1'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '13:30h - 14:00h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 2'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '13:30h - 14:00h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 3'
         },
         {
           title: 'Nuevas tecnologías y educación',
           date: '13:30h - 14:00h',
           size: 'frame-1x1',
-          color: 'hsl(146deg 50% 45%)'
-        }
-      ],
-      scheduleDinner: [
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 4'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '13:30h - 14:00h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 5'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '13:30h - 14:00h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 6'
+        },
         {
           title: 'Hora de la comida y merienda',
           date: 'Comida: 14:00h - 14:45h | Merienda: 16:00h - 16:30h',
-          size: 'frame-1x1',
+          size: 'frame-6x1',
           color: 'hsl(248deg 53% 57%)'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '15:00h - 15:30h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 1'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '15:30h - 16:00h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 2'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '16:30h - 17:00h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 3'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '17:00h - 17:30h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 4'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '17:30h - 18:00h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 5'
+        },
+        {
+          title: 'Nuevas tecnologías y educación',
+          date: '18:00h - 18:30h',
+          size: 'frame-1x1',
+          color: 'hsl(146deg 50% 45%)',
+          stage: 'Escenario 6'
         }
       ]
     }
@@ -131,13 +195,12 @@ class Horario extends HTMLElement {
     this.shadow.innerHTML =
       /* html */`
         <style>
-          .schedule-body{
-            padding: 7rem 0.1rem 0 0.1rem;
-            overflow: hidden;
+          .product.hidden{
+            display: none;
           }
-
-          .schedule-image{
-            padding: 1rem 0.5rem 0 0.5rem;
+          
+          .schedule-body{
+            overflow: hidden;
           }
 
           .schedule-image img{
@@ -179,6 +242,10 @@ class Horario extends HTMLElement {
             padding: 0 7rem 2rem 7rem;
           }
 
+          .schedule-stage{
+            font-style: italic;
+          }
+
           .schedule-inscription-title h3{
             color: hsl(209deg 100% 55%);
           }
@@ -196,6 +263,13 @@ class Horario extends HTMLElement {
 
           .frame-1x1{
             grid-column: span 1;
+            grid-row: span 1;
+            place-items: center;
+            position: relative;
+          }
+
+          .frame-6x1{
+            grid-column: span 6;
             grid-row: span 1;
             place-items: center;
             position: relative;
@@ -240,11 +314,9 @@ class Horario extends HTMLElement {
           </div>
 
           <div class="schedule"></div>
-          <div class="schedule-dinner"></div>
         </div>
       `
     const schedules = this.shadow.querySelector('.schedule')
-    const schedulesDinner = this.shadow.querySelector('.schedule-dinner')
 
     this.data.schedule.forEach(category => {
       const schedule = document.createElement('div')
@@ -253,12 +325,17 @@ class Horario extends HTMLElement {
       schedules.appendChild(schedule)
       schedule.style.backgroundColor = category.color
 
-      const buttonContainer = document.createElement('div')
-      buttonContainer.classList.add('add-button-container')
-      schedule.appendChild(buttonContainer)
+      if (category.title !== 'Hora de la comida y merienda') {
+        const buttonContainer = document.createElement('div')
+        buttonContainer.classList.add('add-button-container')
+        schedule.appendChild(buttonContainer)
 
-      const addButton = document.createElement('add-button-component')
-      buttonContainer.appendChild(addButton)
+        const addButton = document.createElement('add-button-component')
+        buttonContainer.appendChild(addButton)
+
+        const addButtonNotification = document.createElement('notification-component')
+        buttonContainer.appendChild(addButtonNotification)
+      }
 
       const scheduleInfo = document.createElement('div')
       scheduleInfo.classList.add('schedule-info')
@@ -271,33 +348,11 @@ class Horario extends HTMLElement {
       const scheduleDate = document.createElement('h2')
       scheduleDate.textContent = category.date
       scheduleInfo.appendChild(scheduleDate)
-    })
 
-    this.data.scheduleDinner.forEach(category => {
-      const scheduleDinner = document.createElement('div')
-      scheduleDinner.classList.add('schedule')
-      scheduleDinner.classList.add(category.size)
-      schedulesDinner.appendChild(scheduleDinner)
-      scheduleDinner.style.backgroundColor = category.color
-
-      const buttonContainerDinner = document.createElement('div')
-      buttonContainerDinner.classList.add('add-button-container')
-      scheduleDinner.appendChild(buttonContainerDinner)
-
-      const addButtonDinner = document.createElement('add-button-component')
-      buttonContainerDinner.appendChild(addButtonDinner)
-
-      const scheduleInfoDinner = document.createElement('div')
-      scheduleInfoDinner.classList.add('schedule-info')
-      scheduleDinner.appendChild(scheduleInfoDinner)
-
-      const scheduleTitleDinner = document.createElement('h3')
-      scheduleTitleDinner.textContent = category.title
-      scheduleInfoDinner.appendChild(scheduleTitleDinner)
-
-      const scheduleDateDinner = document.createElement('h2')
-      scheduleDateDinner.textContent = category.date
-      scheduleInfoDinner.appendChild(scheduleDateDinner)
+      const scheduleStage = document.createElement('h2')
+      scheduleStage.classList.add('schedule-stage')
+      scheduleStage.textContent = category.stage
+      scheduleInfo.appendChild(scheduleStage)
     })
   }
 }

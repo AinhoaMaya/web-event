@@ -466,10 +466,6 @@ class ProductGallery extends HTMLElement {
         background-color: hsl(248deg 53% 57%);
       }
 
-      .product.hidden{
-        display: none;
-      }
-
       .add-button-container{
         position: absolute;
         right: 1rem;
