@@ -23,10 +23,6 @@ class About extends HTMLElement {
             overflow: hidden;
           }
 
-          .about-image{
-            padding: 7.5rem 5rem 0 5rem;
-          }
-
           .about-image img{
             object-fit: cover;
             width: 100%;

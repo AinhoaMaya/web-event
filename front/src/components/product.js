@@ -30,7 +30,7 @@ class Product extends HTMLElement {
           }
 
           .products{
-            padding-top: 2.5rem;
+            padding-top: 5rem;
             height: 80vh;
             max-height: 80vh;
             z-index: 1000;
@@ -76,6 +76,10 @@ class Product extends HTMLElement {
             padding: 0.5rem 5rem;
             margin: 2rem 0;
             transition: all 0.3s ease;
+          }
+
+          .products-button button:hover{
+            background-color: hsl(204, 59%, 61%);
           }
         </style>
 
