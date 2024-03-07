@@ -1,0 +1,14 @@
+[
+  {
+    "title": "inicio",
+    "link": "/"
+  },
+  {
+    "title": "quiénes somos",
+    "link": "/about.html"
+  },
+  {
+    "title": "horarios",
+    "link": "/schedule.html"
+  }
+]

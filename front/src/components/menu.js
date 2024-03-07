@@ -11,20 +11,8 @@ class Menu extends HTMLElement {
   }
 
   async loadData () {
-    this.data = [
-      {
-        title: 'inicio',
-        link: '/'
-      },
-      {
-        title: 'quiénes somos',
-        link: '/about.html'
-      },
-      {
-        title: 'horarios',
-        link: '/schedule.html'
-      }
-    ]
+    const response = await fetch('/src/data/menu.json')
+    this.data = await response.json()
   }
 
   render () {

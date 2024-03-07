@@ -11,24 +11,8 @@ class Logo extends HTMLElement {
   }
 
   async loadData () {
-    this.data = {
-      images: {
-        alt: 'logo',
-        title: 'logo',
-        xs: {
-          src: './public/logo.svg'
-        },
-        sm: {
-          src: './public/logo.svg'
-        },
-        md: {
-          src: './public/logo.svg'
-        },
-        lg: {
-          src: './public/logo.svg'
-        }
-      }
-    }
+    const response = await fetch('/src/data/logo.json')
+    this.data = await response.json()
   }
 
   render () {

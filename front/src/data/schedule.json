@@ -1,0 +1,157 @@
+{
+  "images": {
+    "alt": "schedule",
+    "title": "schedule",
+    "xs": {
+      "src": "./public/schedule.webp"
+    },
+    "sm": {
+      "src": "./public/schedule.webp"
+    },
+    "md": {
+      "src": "./public/schedule.webp"
+    },
+    "lg": {
+      "src": "./public/schedule.webp"
+    }
+  },
+  "title": "encuentro mosaico",
+  "subtitle": "Un espacio para compartir, aprender y disfrutar",
+  "date": "Llucmajor | 09:00h",
+  "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae",
+  "text": "¡Apúntate a las actividades!",
+  "schedule": [
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "09:00h - 10:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 1"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "10:30h - 11:30h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 2"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "11:15h - 11:45h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 3"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "12:00h - 12:30h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 4"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "12:20h - 13:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 5"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "12:45h - 13:45h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 6"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:15h - 13:50h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 1"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:30h - 14:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 2"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:30h - 14:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 3"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:30h - 14:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 4"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:30h - 14:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 5"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "13:30h - 14:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 6"
+    },
+    {
+      "title": "Hora de la comida y merienda",
+      "date": "Comida: 14:00h - 14:45h | Merienda: 16:00h - 16:30h",
+      "size": "frame-6x1",
+      "color": "hsl(248deg 53% 57%)"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "15:00h - 15:30h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 1"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "15:30h - 16:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 2"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "16:30h - 17:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 3"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "17:00h - 17:30h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 4"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "17:30h - 18:00h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 5"
+    },
+    {
+      "title": "Nuevas tecnologías y educación",
+      "date": "18:00h - 18:30h",
+      "size": "frame-1x1",
+      "color": "hsl(146deg 50% 45%)",
+      "stage": "Escenario 6"
+    }
+  ]
+}

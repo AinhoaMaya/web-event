@@ -1,0 +1,377 @@
+[
+  {
+    "buttonLinkProduct": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-1x1",
+    "color": "hsl(9deg 100% 65%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-2x2",
+    "color": "hsl(38deg 100% 50%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-1x2",
+    "color": "hsl(209deg 100% 55%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-1x1",
+    "color": "hsl(248deg 53% 57%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-2x1",
+    "color": "hsl(146deg 50% 45%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "familias",
+    "size": "frame-2x1",
+    "color": "hsl(300deg 75% 70%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "adultos",
+    "size": "frame-3x1",
+    "color": "hsl(9deg 100% 65%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-1x1",
+    "color": "hsl(38deg 100% 50%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "adultos",
+    "size": "frame-2x2",
+    "color": "hsl(209deg 100% 55%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "niños",
+    "size": "frame-1x1",
+    "color": "hsl(300, 75%, 70%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "adultos",
+    "size": "frame-1x1",
+    "color": "hsl(248deg 53% 57%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "familias",
+    "size": "frame-1x1",
+    "color": "hsl(300deg 75% 70%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "familias",
+    "size": "frame-2x1",
+    "color": "hsl(9deg 100% 65%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "adultos",
+    "size": "frame-1x1",
+    "color": "hsl(248deg 53% 57%)"
+  },
+  {
+    "buttonLink": "/product/1",
+    "images": {
+      "alt": "product",
+      "title": "product",
+      "xs": {
+        "src": "./public/product.svg"
+      },
+      "sm": {
+        "src": "./public/product.svg"
+      },
+      "md": {
+        "src": "./public/product.svg"
+      },
+      "lg": {
+        "src": "./public/product.svg"
+      }
+    },
+    "title": "Nuevas tecnologías y educación",
+    "description": "Charla con el grupo \"Por una adolescencia libre de móvil\"",
+    "schedule": "10:00 - 11:00",
+    "category": "adultos",
+    "size": "frame-1x1",
+    "color": "hsl(38deg 100% 50%)"
+  }
+]

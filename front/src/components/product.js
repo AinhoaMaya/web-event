@@ -11,28 +11,8 @@ class Product extends HTMLElement {
   }
 
   async loadData () {
-    this.data = {
-      images: {
-        alt: 'son-sampol',
-        title: 'finca son sampol',
-        xs: {
-          src: './public/product-puppets-mobile.webp'
-        },
-        sm: {
-          src: './public/product-puppets-mobile.webp'
-        },
-        md: {
-          src: './public/product-puppets.webp'
-        },
-        lg: {
-          src: './public/product-puppets.webp'
-        }
-      },
-      title: 'Taller de marionetas',
-      subtitle: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos voluptate maxime, vitae, commodi amet at recusandae error saepe perspiciatis ducimus, fugiat doloremque temporibus accusamus ratione quisquam atque ipsam repudiandae?',
-      buttonText: 'Reserva tu plaza'
-    }
+    const response = await fetch('/src/data/product.json')
+    this.data = await response.json()
   }
 
   render () {

@@ -12,20 +12,8 @@ class CategoryFilter extends HTMLElement {
   }
 
   async loadData () {
-    this.data = [
-      {
-        title: 'Todos'
-      },
-      {
-        title: 'Familias'
-      },
-      {
-        title: 'Adultos'
-      },
-      {
-        title: 'Niños'
-      }
-    ]
+    const response = await fetch('/src/data/category-filter.json')
+    this.data = await response.json()
   }
 
   render () {

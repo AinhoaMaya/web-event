@@ -11,28 +11,8 @@ class Hero extends HTMLElement {
   }
 
   async loadData () {
-    this.data = {
-      title: 'Encuentro Mosaico',
-      description: 'Un espacio para compartir, aprender y disfrutar',
-      buttonText: 'Ver horarios',
-      buttonLink: 'schedule.html',
-      images: {
-        alt: 'son-sampol',
-        title: 'finca son sampol',
-        xs: {
-          src: './public/son-sampol-mobile.webp'
-        },
-        sm: {
-          src: './public/son-sampol-mobile.webp'
-        },
-        md: {
-          src: './public/son-sampol.webp'
-        },
-        lg: {
-          src: './public/son-sampol.webp'
-        }
-      }
-    }
+    const response = await fetch('/src/data/hero.json')
+    this.data = await response.json()
   }
 
   async render () {

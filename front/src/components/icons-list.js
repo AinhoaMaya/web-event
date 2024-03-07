@@ -12,75 +12,8 @@ class IconList extends HTMLElement {
   }
 
   async loadData () {
-    this.data = {
-      iconsFB: {
-        alt: 'icon-facebook',
-        title: 'icon Facebook',
-        xs: {
-          src: './public/icon-fb.svg'
-        },
-        sm: {
-          src: './public/icon-fb.svg'
-        },
-        md: {
-          src: './public/icon-fb.svg'
-        },
-        lg: {
-          src: './public/icon-fb.svg'
-        }
-      },
-
-      iconsX: {
-        alt: 'icon-x',
-        title: 'icon X',
-        xs: {
-          src: './public/icon-x.svg'
-        },
-        sm: {
-          src: './public/icon-x.svg'
-        },
-        md: {
-          src: './public/icon-x.svg'
-        },
-        lg: {
-          src: './public/icon-x.svg'
-        }
-      },
-
-      iconsIG: {
-        alt: 'icon-instagram',
-        title: 'icon Instagram',
-        xs: {
-          src: './public/icon-ig.svg'
-        },
-        sm: {
-          src: './public/icon-ig.svg'
-        },
-        md: {
-          src: './public/icon-ig.svg'
-        },
-        lg: {
-          src: './public/icon-ig.svg'
-        }
-      },
-
-      iconsYT: {
-        alt: 'icon-youtube',
-        title: 'icon Youtube',
-        xs: {
-          src: './public/icon-yt.svg'
-        },
-        sm: {
-          src: './public/icon-yt.svg'
-        },
-        md: {
-          src: './public/icon-yt.svg'
-        },
-        lg: {
-          src: './public/icon-yt.svg'
-        }
-      }
-    }
+    const response = await fetch('/src/data/icon-list.json')
+    this.data = await response.json()
   }
 
   render () {

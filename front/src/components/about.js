@@ -11,26 +11,8 @@ class About extends HTMLElement {
   }
 
   async loadData () {
-    this.data = {
-      images: {
-        alt: 'son-sampol',
-        title: 'finca son sampol',
-        xs: {
-          src: './public/about-mobile.webp'
-        },
-        sm: {
-          src: './public/about-mobile.webp'
-        },
-        md: {
-          src: './public/about.webp'
-        },
-        lg: {
-          src: './public/about.webp'
-        }
-      },
-      title: 'Sobre nosotros',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quia dolorem iste natus sit maiores nostrum repudiandae mollitia eaque rem, quas praesentium perferendis? Ad dolore voluptatum dolor optio saepe repudiandae velit, sint quasi, eligendi magnam vel officiis ipsam cumque perspiciatis alias ratione voluptate delectus perferendis! Ratione dolorem dolor nemo minima eum mollitia adipisci? Similique explicabo nobis vitae provident tenetur neque repellendus error rem repudiandae eum sequi obcaecati aliquam harum omnis debitis commodi ducimus dolorum amet corrupti illo, veritatis, quod nulla. Dolorum, ducimus a error minima odit libero et. Aperiam fuga in, odio voluptates ipsam rem explicabo inventore optio vitae tenetur esse cumque dolores laborum assumenda enim, accusantium alias. Amet, nisi molestias saepe incidunt error possimus repellendus vel nemo eligendi numquam voluptas expedita iste, soluta aspernatur sint quasi facilis voluptates quidem reiciendis temporibus cumque praesentium! Tempore, nobis minus quas sed atque at sint velit impedit perspiciatis, exercitationem quis amet adipisci praesentium!'
-    }
+    const response = await fetch('/src/data/about.json')
+    this.data = await response.json()
   }
 
   render () {
