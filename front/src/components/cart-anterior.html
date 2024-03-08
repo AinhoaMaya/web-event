@@ -234,51 +234,50 @@ class Cart extends HTMLElement {
             <div class="cart-products">
              
             </div>
-            <form class="cart-form">
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Nombre</label>
-                </div>
-                <div class="form-input">
-                  <input type="text" id="name" name="name" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Apellidos</label>
-                </div>
-                <div class="form-input">
-                  <input type="text" id="lastname" name="surname" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Email</label>
-                </div>
-                <div class="form-input">
-                  <input type="email" id="email" name="email" required>
-                </div>
-              </div>
-
-              <div class="form-checkbox">
-                <div class="form-input">
-                  <input type="checkbox" id="info" name="info">
-                </div>
-                <div class="form-label">
-                  <p>Quiero recibir información sobre futuros enventos</p>
-                </div>
-              </div>
-
-              <div class="form-button">
-                <button class="send-button">Reserva tu plaza</button>
-              </div>
-            </form>
           </div>
 
 
-       
+          <form class="cart-form">
+            <div class="form-group">
+              <div class="form-label">
+                <label>Nombre</label>
+              </div>
+              <div class="form-input">
+                <input type="text" id="name" name="name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-label">
+                <label>Apellidos</label>
+              </div>
+              <div class="form-input">
+                <input type="text" id="lastname" name="surname" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-label">
+                <label>Email</label>
+              </div>
+              <div class="form-input">
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+
+            <div class="form-checkbox">
+              <div class="form-input">
+                <input type="checkbox" id="info" name="info">
+              </div>
+              <div class="form-label">
+                <p>Quiero recibir información sobre futuros enventos</p>
+              </div>
+            </div>
+
+            <div class="form-button">
+              <button class="send-button">Reserva tu plaza</button>
+            </div>
+          </form>
         </div> 
       `
 
@@ -363,7 +362,6 @@ class Cart extends HTMLElement {
       const cartButtonRemove = document.createElement('div')
       cartButtonRemove.classList.add('cart-products-button-remove')
       cartProductBlock.appendChild(cartButtonRemove)
-      cartButtonRemove.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>'
     })
 
     const cartButton = this.shadow.querySelector('.button-cart')
