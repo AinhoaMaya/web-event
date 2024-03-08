@@ -2,13 +2,21 @@ class Cart extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.products = []
+    this.data = []
   }
 
-  connectedCallback () {
-    this.render()
+  async connectedCallback () {
+    await this.loadData()
+    await this.render()
   }
 
-  render () {
+  async loadData () {
+    const response = await fetch('/src/data/cart.json')
+    this.data = await response.json()
+  }
+
+  render (products = this.data) {
     this.shadow.innerHTML =
       /* html */`
         <style>
@@ -380,7 +388,7 @@ class Cart extends HTMLElement {
           </div>
 
 
-            <div class="cart-form">
+            <form class="cart-form">
               <div class="form-group">
                 <div class="form-label">
                   <label>Nombre</label>
@@ -418,16 +426,96 @@ class Cart extends HTMLElement {
               </div>
 
               <div class="form-button">
-                <button>Reserva tu plaza</button>
+                <button class="send-button">Reserva tu plaza</button>
               </div>
-            </div>
+            </form>
           </div> 
         </div>
       `
 
+    const cartProducts = this.shadow.querySelector('.cart-body')
+
+    cartProducts.forEach(cart => {
+      const cartProduct = document.createElement('div')
+      cartProduct.classList.add('cart-products')
+      cartProducts.appendChild(cartProduct)
+
+      const cartProductBlock = document.createElement('div')
+      cartProductBlock.classList.add('cart-products-block')
+      cartProducts.appendChild(cartProductBlock)
+
+      const cartProductImages = document.createElement('div')
+      cartProductImages.classList.add('cart-products-images')
+      cartProductBlock.appendChild(cartProductImages)
+
+      const productDetails = document.createElement('div')
+      productDetails.classList.add('product-details')
+
+      const productImage = document.createElement('div')
+      productImage.classList.add('product-image')
+      productDetails.appendChild(productImage)
+
+      const picture = document.createElement('picture')
+      productImage.appendChild(picture)
+
+      const sourceLg = document.createElement('source')
+      sourceLg.setAttribute('srcset', cart.images.lg.src)
+      sourceLg.setAttribute('type', 'image/webp')
+      sourceLg.setAttribute('media', '(min-width: 1921px)')
+      picture.appendChild(sourceLg)
+
+      const sourceMd = document.createElement('source')
+      sourceMd.setAttribute('srcset', cart.images.md.src)
+      sourceMd.setAttribute('type', 'image/webp')
+      sourceMd.setAttribute('media', '(min-width: 1025px')
+      picture.appendChild(sourceMd)
+
+      const sourceSm = document.createElement('source')
+      sourceSm.setAttribute('srcset', cart.images.sm.src)
+      sourceSm.setAttribute('type', 'image/webp')
+      sourceSm.setAttribute('media', '(min-width: 601px)')
+      picture.appendChild(sourceSm)
+
+      const sourceXs = document.createElement('source')
+      sourceXs.setAttribute('srcset', cart.images.xs.src)
+      sourceXs.setAttribute('type', 'image/webp')
+      sourceXs.setAttribute('media', '(max-width: 600px)')
+      picture.appendChild(sourceXs)
+
+      const img = document.createElement('img')
+      img.setAttribute('src', cart.images.lg.src)
+      img.setAttribute('alt', cart.images.lg.alt)
+      img.setAttribute('title', cart.images.lg.title)
+      picture.appendChild(img)
+
+      const cartTitleButton = document.createElement('div')
+      cartTitleButton.classList.add('cart-products-title-button')
+      cartProductBlock.appendChild(cartTitleButton)
+
+      const cartTitle = document.createElement('div')
+      cartTitle.classList.add('cart-products-title')
+      cartTitleButton.appendChild(cartTitle)
+
+      const cartTitleContent = document.createElement('h4')
+      cartTitleContent.textContent = cart.title
+      cartTitle.appendChild(cartTitleContent)
+
+      const cartProductsButtons = document.createElement('div')
+      cartProductsButtons.classList.add('cart-products-title')
+      cartTitleButton.appendChild(cartProductsButtons)
+
+      const plusMinusComponent = document.createElement('plus-minus-component')
+      cartProductsButtons.appendChild(plusMinusComponent)
+
+      const cartButtonRemove = document.createElement('div')
+      cartButtonRemove.classList.add('cart-products-button-remove')
+      cartProductBlock.appendChild(cartButtonRemove)
+    })
+
     const cartButton = this.shadow.querySelector('.button-cart')
     const cart = this.shadow.querySelector('.cart')
     const cartButtonRemove = this.shadow.querySelector('.cart-header-button-remove')
+    const sendButton = this.shadow.querySelector('.send-button')
 
     cartButton.addEventListener('click', () => {
       cart.classList.add('active')
@@ -436,6 +524,28 @@ class Cart extends HTMLElement {
     cartButtonRemove.addEventListener('click', () => {
       cart.classList.remove('active')
     })
+
+    sendButton.addEventListener('click', () => {
+      this.sendForm()
+    })
+  }
+
+  async sendForm () {
+    const form = this.shadow.querySelector('form.cart-form')
+    const formData = new FormData(form)
+    const formDataJson = Object.fromEntries(formData.entries())
+
+    console.log(formDataJson)
+
+    const response = await fetch('https://localhost:3000/api/form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formDataJson)
+    })
+
+    console.log(response)
   }
 }
 
