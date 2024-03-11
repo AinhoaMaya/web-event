@@ -27,15 +27,17 @@ class PlusMinusButton extends HTMLElement {
             background-color: hsl(0, 73%, 58%);
             border: none;
             width: 25px;
-            height: 100%;
             cursor: pointer;
+          }
+          
+          .cart-products-buttons-reduce button{
+            border-radius: 1rem;
           }
 
           .cart-products-buttons-add{
             background-color: hsl(120, 80%, 32%);
             border: none;
             width: 25px;
-            height: 100%;
             cursor: pointer;
           }
 

@@ -136,12 +136,12 @@ class Cart extends HTMLElement {
           .cart-products-button-remove{
             display: flex;
             align-items: center;
+            cursor: pointer;
           }
 
           .cart-products-button-remove button{
             border: none;
             width: 25px;
-            cursor: pointer;
             background: none;
           }
 
@@ -204,6 +204,7 @@ class Cart extends HTMLElement {
 
       const productDetails = document.createElement('div')
       productDetails.classList.add('product-details')
+      cartProductImages.appendChild(productDetails)
 
       const productImage = document.createElement('div')
       productImage.classList.add('product-image')
@@ -221,7 +222,7 @@ class Cart extends HTMLElement {
       const sourceMd = document.createElement('source')
       sourceMd.setAttribute('srcset', cart.images.md.src)
       sourceMd.setAttribute('type', 'image/webp')
-      sourceMd.setAttribute('media', '(min-width: 1025px')
+      sourceMd.setAttribute('media', '(min-width: 1025px)')
       picture.appendChild(sourceMd)
 
       const sourceSm = document.createElement('source')

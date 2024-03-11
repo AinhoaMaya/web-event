@@ -174,7 +174,7 @@ class ProductGallery extends HTMLElement {
       const sourceMd = document.createElement('source')
       sourceMd.setAttribute('srcset', product.images.md.src)
       sourceMd.setAttribute('type', 'image/webp')
-      sourceMd.setAttribute('media', '(min-width: 1025px')
+      sourceMd.setAttribute('media', '(min-width: 1025px)')
       picture.appendChild(sourceMd)
 
       const sourceSm = document.createElement('source')

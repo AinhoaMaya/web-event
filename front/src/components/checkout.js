@@ -86,7 +86,18 @@ class Checkout extends HTMLElement {
               <label>Nombre</label>
             </div>
             <div class="form-input">
-              <input type="text" id="name" name="name" data-validate="onlyLetters" data-message="Sólo se admiten letras">
+              <input type="text" id="name" name="name" data-validate='{ 
+                "required": {
+                  "message": "El campo es obligatorio"
+                },
+                "minLength": {
+                  "value": 3,
+                  "message": "Mínimo 3 caracteres"
+                },
+                "onlyLetters": {
+                  "message":"Sólo se admiten letras"
+                }
+              }'>
             </div>
           </div>
 
@@ -95,7 +106,7 @@ class Checkout extends HTMLElement {
               <label>Apellidos</label>
             </div>
             <div class="form-input">
-              <input type="text" id="lastname" name="surname" data-validate="onlyLetters" data-message="Sólo se admiten letras">
+              <input type="text" id="lastname" name="surname" data-validate='{ "required": "El campo es obligatorio", "onlyLetters": "Sólo se admiten letras"}'>
             </div>
           </div>
 
@@ -104,7 +115,7 @@ class Checkout extends HTMLElement {
               <label>Email</label>
             </div>
             <div class="form-input">
-              <input type="email" id="email" name="email" data-validate="email" data-message="Debe ser un email válido">
+              <input type="email" id="email" name="email" data-validate='{"required": "El campo es obligatorio", "email": "Debe ser un email válido"}'>
             </div>
           </div>
 
@@ -129,6 +140,15 @@ class Checkout extends HTMLElement {
     sendButton.addEventListener('click', event => {
       event.preventDefault()
       this.sendForm()
+    })
+
+    const validateInputs = this.shadow.querySelectorAll('input[data-validate]')
+
+    validateInputs.forEach(validateInput => {
+      validateInput.addEventListener('input', event => {
+        const elements = [event.target]
+        this.validateForm(elements)
+      })
     })
   }
 
@@ -166,34 +186,57 @@ class Checkout extends HTMLElement {
       web: /^(http|https):\/\/\w+\.\w+/g,
       password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g,
       date: /^\d{4}-\d{2}-\d{2}$/g,
-      time: /^\d{2}:\d{2}$/g
-
+      time: /^\d{2}:\d{2}$/g,
+      required: /^(?!\s*$).+/g
     }
 
     for (const element of elements) {
       if (element.dataset.validate) {
-        const validator = validators[element.dataset.validate]
-        const valid = element.value.match(validator)
+        const inputValidations = JSON.parse(element.dataset.validate)
 
-        if (valid === null) {
-          element.classList.add('validation-error')
-          const label = element.closest('.form-group').querySelector('.form-label')
-
-          if (!label.querySelector('.error-message')) {
-            const message = document.createElement('span')
-            message.classList.add('error-message')
-            message.textContent = element.dataset.message
-            label.appendChild(message)
+        if (element.value === '' && inputValidations.required) {
+          if (!element.closest('.form-group').querySelector('.error-message')) {
+            const messageContainer = document.createElement('span')
+            messageContainer.classList.add('error-message')
+            messageContainer.textContent = inputValidations.required
+            element.closest('.form-group').querySelector('.form-label').appendChild(messageContainer)
+          } else {
+            element.closest('.form-group').querySelector('.error-message').textContent = inputValidations.required
           }
 
-          validForm = false
-        } else {
-          element.classList.remove('validation-error')
-          const message = document.createElement('span')
-          message.classList.add('error-message-remove')
+          return
+        }
+
+        for (const [validator, validation] of Object.entries(inputValidations)) {
+          let regex = validators[validator]
+
+          if (validator === 'minLength') {
+            regex = /^.{validation.value,}$/g
+            console.log(regex)
+          }
+
+          const valid = element.value.match(regex)
+
+          if (valid === null) {
+            element.classList.add('validation-error')
+            const label = element.closest('.form-group').querySelector('.form-label')
+
+            if (!label.querySelector('.error-message')) {
+              const messageContainer = document.createElement('span')
+              messageContainer.classList.add('error-message')
+              messageContainer.textContent = validation.message
+              label.appendChild(messageContainer)
+            }
+
+            validForm = false
+          } else {
+            element.classList.remove('validation-error')
+            element.closest('.form-group').querySelector('.error-message')?.remove()
+          }
         }
       }
     }
+
     return validForm
   }
 }
