@@ -1,16 +1,16 @@
-const { defineConfig } = require('vite')
+import { defineConfig } from 'vite' // Importar `defineConfig` desde Vite en lugar de utilizar `require`
 
-module.exports = defineConfig({
+export default defineConfig({ // Utilizar `export default` en lugar de `module.exports`
   base: './',
   server: {
-    port: 5173
+    port: 5500
   },
   build: {
-    outDir: 'dist', // La carpeta donde quiero que se guarde el resultado del empaquetamiento. En este caso la carpeta "dist" */
-    assetsDir: 'assets', // JavaScript y CSS se guardarán en la carpeta "assets" y esta dentro de "dist" */
-    minify: 'terser', // Para comprimir al máximo ("minify") se utiliza una librería llamada "terser" */
+    outDir: 'dist',
+    assetsDir: 'assets',
+    minify: 'terser',
     rollupOptions: {
-      input: 'src/index.js' // En la carpeta donde se encuentra el archivo que llama a todos los js */
+      input: 'src/index.js'
     }
   }
 })
