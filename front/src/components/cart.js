@@ -36,7 +36,7 @@ class Cart extends HTMLElement {
           h5{
             color: hsl(0, 0%, 100%);
             font-family: 'Poppins', sans-serif;
-            margin: 0;
+            margin-top: 1rem;
           }
 
           p{
@@ -159,52 +159,6 @@ class Cart extends HTMLElement {
             padding: 0 0.5rem;
             flex-grow: 3;
           }
-
-          .cart-form{
-            background-color: hsl(0, 0%, 90%);
-            height: 50%;
-          }
-
-          .cart-form input{
-            width: 90%;
-          }
-
-          .form-group, .form-button{
-            padding: 1rem 0 0 1rem;
-          }
-
-          .form-checkbox{
-            padding: 1rem 0 0 0.5rem;
-          }
-          
-          .form-label{
-            font-family: 'Poppins', sans-serif;
-            color: hsl(0, 0%, 0%);
-          }
-
-          .form-checkbox{
-            display: flex;
-            gap: 0.5rem;
-          }
-
-          .form-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .form-button button{
-            background-color: hsl(204, 59%, 51%);
-            border: none;
-            border-radius: 1rem;
-            color: hsl(0, 0%, 100%);
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 0.5rem 5rem;
-            transition: all 0.3s ease;
-          }
         </style>
 
         <div class="button-cart">
@@ -231,66 +185,13 @@ class Cart extends HTMLElement {
 
 
           <div class="cart-body">
-            <div class="cart-products">
-             
-            </div>
-            <form class="cart-form">
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Nombre</label>
-                </div>
-                <div class="form-input">
-                  <input type="text" id="name" name="name" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Apellidos</label>
-                </div>
-                <div class="form-input">
-                  <input type="text" id="lastname" name="surname" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="form-label">
-                  <label>Email</label>
-                </div>
-                <div class="form-input">
-                  <input type="email" id="email" name="email" required>
-                </div>
-              </div>
-
-              <div class="form-checkbox">
-                <div class="form-input">
-                  <input type="checkbox" id="info" name="info">
-                </div>
-                <div class="form-label">
-                  <p>Quiero recibir información sobre futuros enventos</p>
-                </div>
-              </div>
-
-              <div class="form-button">
-                <button class="send-button">Reserva tu plaza</button>
-              </div>
-            </form>
+            <div class="cart-products"></div>
+            <checkout-component></checkout-component>
           </div>
-
-
-       
         </div> 
       `
 
     const cartProducts = this.shadow.querySelector('.cart-products')
-
-    // const buttonCartContainer = document.createElement('div')
-    // buttonCartContainer.classList.add('button-cart')
-    // cartProducts.appendChild(buttonCartContainer)
-
-    // const buttonCart = document.createElement('button')
-    // buttonCartContainer.appendChild(buttonCart)
-    // buttonCart.textContent = cart.title
 
     this.data.forEach(cart => {
       const cartProductBlock = document.createElement('div')
@@ -369,7 +270,6 @@ class Cart extends HTMLElement {
     const cartButton = this.shadow.querySelector('.button-cart')
     const cart = this.shadow.querySelector('.cart')
     const cartButtonRemove = this.shadow.querySelector('.cart-header-button-remove')
-    const sendButton = this.shadow.querySelector('.send-button')
 
     cartButton.addEventListener('click', () => {
       cart.classList.add('active')
@@ -378,28 +278,6 @@ class Cart extends HTMLElement {
     cartButtonRemove.addEventListener('click', () => {
       cart.classList.remove('active')
     })
-
-    sendButton.addEventListener('click', () => {
-      this.sendForm()
-    })
-  }
-
-  async sendForm () {
-    const form = this.shadow.querySelector('form.cart-form')
-    const formData = new FormData(form)
-    const formDataJson = Object.fromEntries(formData.entries())
-
-    console.log(formDataJson)
-
-    const response = await fetch('https://localhost:3000/api/form', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formDataJson)
-    })
-
-    console.log(response)
   }
 }
 
