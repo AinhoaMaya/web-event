@@ -1,8 +1,5 @@
 {
-  "title": "Encuentro Mosaico",
-  "description": "Un espacio para compartir, aprender y disfrutar",
-  "buttonText": "Ver horarios",
-  "buttonLink": "/horarios",
+  "id": "13",
   "images": {
     "alt": "son-sampol",
     "title": "finca son sampol",
@@ -18,5 +15,6 @@
     "lg": {
       "src": "./public/son-sampol.webp"
     }
-  }
+  },
+  "title": "Taller de marionetas"
 }

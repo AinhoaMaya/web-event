@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "buttonLinkProduct": "/actividad/1",
     "images": {
       "alt": "product",
@@ -25,6 +26,7 @@
     "color": "hsl(9deg 100% 65%)"
   },
   {
+    "id": "2",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -50,6 +52,7 @@
     "color": "hsl(38deg 100% 50%)"
   },
   {
+    "id": "3",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -75,6 +78,7 @@
     "color": "hsl(209deg 100% 55%)"
   },
   {
+    "id": "4",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -100,6 +104,7 @@
     "color": "hsl(248deg 53% 57%)"
   },
   {
+    "id": "5",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -125,6 +130,7 @@
     "color": "hsl(146deg 50% 45%)"
   },
   {
+    "id": "6",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -150,6 +156,7 @@
     "color": "hsl(300deg 75% 70%)"
   },
   {
+    "id": "7",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -175,6 +182,7 @@
     "color": "hsl(9deg 100% 65%)"
   },
   {
+    "id": "8",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -200,6 +208,7 @@
     "color": "hsl(38deg 100% 50%)"
   },
   {
+    "id": "9",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -225,6 +234,7 @@
     "color": "hsl(209deg 100% 55%)"
   },
   {
+    "id": "10",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -250,6 +260,7 @@
     "color": "hsl(300, 75%, 70%)"
   },
   {
+    "id": "11",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -275,6 +286,7 @@
     "color": "hsl(248deg 53% 57%)"
   },
   {
+    "id": "12",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -300,6 +312,7 @@
     "color": "hsl(300deg 75% 70%)"
   },
   {
+    "id": "13",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -325,6 +338,7 @@
     "color": "hsl(9deg 100% 65%)"
   },
   {
+    "id": "14",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",
@@ -350,6 +364,7 @@
     "color": "hsl(248deg 53% 57%)"
   },
   {
+    "id": "15",
     "buttonLink": "/actividad/1",
     "images": {
       "alt": "product",

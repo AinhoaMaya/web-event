@@ -1,22 +1,3 @@
 [
-  {
-    "quantity": 5,
-    "images": {
-      "alt": "son-sampol",
-      "title": "finca son sampol",
-      "xs": {
-        "src": "./public/son-sampol-mobile.webp"
-      },
-      "sm": {
-        "src": "./public/son-sampol-mobile.webp"
-      },
-      "md": {
-        "src": "./public/son-sampol.webp"
-      },
-      "lg": {
-        "src": "./public/son-sampol.webp"
-      }
-    },
-    "title": "Taller de marionetas"
-  }
+  
 ]
