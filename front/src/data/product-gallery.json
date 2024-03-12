@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "buttonLinkProduct": "/actividad/1",
+    "buttonLinkProduct": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -27,7 +27,7 @@
   },
   {
     "id": "2",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -53,7 +53,7 @@
   },
   {
     "id": "3",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -79,7 +79,7 @@
   },
   {
     "id": "4",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -105,7 +105,7 @@
   },
   {
     "id": "5",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -131,7 +131,7 @@
   },
   {
     "id": "6",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -157,7 +157,7 @@
   },
   {
     "id": "7",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -183,7 +183,7 @@
   },
   {
     "id": "8",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -209,7 +209,7 @@
   },
   {
     "id": "9",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -235,7 +235,7 @@
   },
   {
     "id": "10",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -261,7 +261,7 @@
   },
   {
     "id": "11",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -287,7 +287,7 @@
   },
   {
     "id": "12",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -313,7 +313,7 @@
   },
   {
     "id": "13",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -339,7 +339,7 @@
   },
   {
     "id": "14",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",
@@ -365,7 +365,7 @@
   },
   {
     "id": "15",
-    "buttonLink": "/actividad/1",
+    "buttonLink": "/products/1",
     "images": {
       "alt": "product",
       "title": "product",

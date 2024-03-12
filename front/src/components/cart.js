@@ -159,6 +159,10 @@ class Cart extends HTMLElement {
             padding: 0 0.5rem;
             flex-grow: 3;
           }
+
+          .checkout-text{
+            color: hsl(0, 0%, 0%);
+          }
         </style>
 
         <div class="button-cart">
@@ -186,10 +190,25 @@ class Cart extends HTMLElement {
 
           <div class="cart-body">
             <div class="cart-products"></div>
-            <checkout-component></checkout-component>
           </div>
         </div> 
       `
+
+    if (this.data.length === 0) {
+      const cartProducts = document.createElement('div')
+      cartProducts.classList.add('checkout-text')
+
+      const checkoutText = document.createElement('p')
+      checkoutText.textContent = 'No te has apuntado a ninguna actividad'
+      cartProducts.appendChild(checkoutText)
+      this.shadow.querySelector('.cart-products').appendChild(cartProducts)
+    }
+
+    if (this.data.length > 0) {
+      const checkoutComponent = document.createElement('checkout-component')
+      const cartBody = this.shadow.querySelector('.cart-body')
+      cartBody.appendChild(checkoutComponent)
+    }
 
     const cartProducts = this.shadow.querySelector('.cart-products')
 
