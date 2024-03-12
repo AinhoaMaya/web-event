@@ -188,6 +188,8 @@ class Checkout extends HTMLElement {
       date: /^\d{4}-\d{2}-\d{2}$/g,
       time: /^\d{2}:\d{2}$/g,
       required: /^(?!\s*$).+/g
+      // minLenght: (value) => new RegExp(/^/g),
+      // maxLenght: (value) => new RegExp(/^/g)
     }
 
     for (const element of elements) {

@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite' // Importar `defineConfig` desde Vite en lugar de utilizar `require`
+const { defineConfig } = require('vite')
 
-export default defineConfig({ // Utilizar `export default` en lugar de `module.exports`
+export default defineConfig({
   base: './',
   server: {
-    port: 5500
+    port: 5173
   },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
     rollupOptions: {
-      input: 'src/index.js'
+      input: '/src/index.js'
     }
   }
 })

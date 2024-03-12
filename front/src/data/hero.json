@@ -2,7 +2,7 @@
   "title": "Encuentro Mosaico",
   "description": "Un espacio para compartir, aprender y disfrutar",
   "buttonText": "Ver horarios",
-  "buttonLink": "schedule.html",
+  "buttonLink": "/actividad",
   "images": {
     "alt": "son-sampol",
     "title": "finca son sampol",
