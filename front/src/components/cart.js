@@ -1,11 +1,21 @@
+import { store } from '../redux/store.js'
+import { addProduct, removeProduct } from '../redux/cart-slice.js'
+
 class Cart extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.data = []
+    this.unsubscribe = null
   }
 
   async connectedCallback () {
+    this.unsubscribe = store.subscribe(() => {
+      const currentState = store.getState()
+
+      console.log(currentState.cart.cartProducts)
+    })
+
     await this.loadData()
     await this.render()
   }
@@ -55,6 +65,7 @@ class Cart extends HTMLElement {
           }
 
           .cart{
+            background-color: hsl(0, 0%, 100%);
             width: 400px;
             height: 100vh;
             min-height: 100vh;
@@ -97,7 +108,6 @@ class Cart extends HTMLElement {
           }
 
           .cart-products{
-            background-color: hsl(0, 0%, 100%);
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -160,8 +170,15 @@ class Cart extends HTMLElement {
             flex-grow: 3;
           }
 
-          .checkout-text{
+          .checkout-text-div{
             color: hsl(0, 0%, 0%);
+          }
+
+          .checkout-text{
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+            font-weight: bold
           }
         </style>
 
@@ -196,10 +213,11 @@ class Cart extends HTMLElement {
 
     if (this.data.length === 0) {
       const cartProducts = document.createElement('div')
-      cartProducts.classList.add('checkout-text')
+      cartProducts.classList.add('checkout-text-div')
 
       const checkoutText = document.createElement('p')
-      checkoutText.textContent = 'No te has apuntado a ninguna actividad'
+      checkoutText.classList.add('checkout-text')
+      checkoutText.textContent = '¡No te has apuntado a ninguna actividad!'
       cartProducts.appendChild(checkoutText)
       this.shadow.querySelector('.cart-products').appendChild(cartProducts)
     }

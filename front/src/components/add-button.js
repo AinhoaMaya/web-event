@@ -1,3 +1,6 @@
+import { store } from '../redux/store.js'
+import { addProduct, removeProduct } from '../redux/cart-slice.js'
+
 class AddButton extends HTMLElement {
   constructor () {
     super()
@@ -6,6 +9,7 @@ class AddButton extends HTMLElement {
   }
 
   connectedCallback () {
+    this.productId = this.getAttribute('product-id')
     this.render()
   }
 
@@ -139,23 +143,23 @@ class AddButton extends HTMLElement {
 
     const button = this.shadow.querySelector('button')
 
-    button.addEventListener('click', function () {
-      button.classList.toggle('active')
-
+    button.addEventListener('click', () => {
       if (button.classList.contains('active')) {
-        document.dispatchEvent(new CustomEvent('message', {
-          detail: {
-            text: 'Se ha añadido la actividad al carrito'
-          }
-        }))
+        button.classList.remove('active')
+        this.removeElement()
       } else {
-        document.dispatchEvent(new CustomEvent('message', {
-          detail: {
-            text: 'Se ha removido la actividad al carrito'
-          }
-        }))
+        button.classList.add('active')
+        this.addElement()
       }
     })
+  }
+
+  addElement () {
+    console.log(this.productId)
+  }
+
+  removeElement () {
+
   }
 }
 
