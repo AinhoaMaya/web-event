@@ -14,6 +14,16 @@ class Cart extends HTMLElement {
       const currentState = store.getState()
 
       console.log(currentState.cart.cartProducts)
+
+      if (currentState.cart.cartProducts.length > this.data.length) {
+        currentState.cart.cartProducts.forEach(async product => {
+          const cartProduct = this.data.some(cartProduct => cartProduct.id === product.id)
+
+          if (!cartProduct) {
+            await this.addProduct(product.id)
+          }
+        })
+      }
     })
 
     await this.loadData()
@@ -297,25 +307,53 @@ class Cart extends HTMLElement {
       cartTitleButton.appendChild(cartProductsButtons)
 
       const plusMinusComponent = document.createElement('plus-minus-component')
+      plusMinusComponent.setAttribute('product-id', cart.id)
+      plusMinusComponent.setAttribute('quantity', cart.quantity)
       cartProductsButtons.appendChild(plusMinusComponent)
 
       const cartButtonRemove = document.createElement('div')
       cartButtonRemove.classList.add('cart-products-button-remove')
       cartProductBlock.appendChild(cartButtonRemove)
+      cartButtonRemove.dataset.id = cart.id
       cartButtonRemove.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>'
     })
 
     const cartButton = this.shadow.querySelector('.button-cart')
     const cart = this.shadow.querySelector('.cart')
-    const cartButtonRemove = this.shadow.querySelector('.cart-header-button-remove')
 
     cartButton.addEventListener('click', () => {
       cart.classList.add('active')
     })
 
-    cartButtonRemove.addEventListener('click', () => {
-      cart.classList.remove('active')
+    cart.addEventListener('click', event => {
+      if (event.target.closest('.cart-header-button-remove')) {
+        cart.classList.remove('active')
+      }
+
+      // const productId = this.shadow.querySelector(id)
+
+      if (event.target.closest('.cart-products-button-remove')) {
+        const productElement = event.target.closest('.cart-products-button-remove')
+        const productId = productElement.dataset.id
+
+        this.removeProduct(productId)
+      }
     })
+  }
+
+  async addProduct (id) {
+    const response = await fetch(`/src/data/products/${id}.json`)
+    const product = await response.json()
+    this.data.push(product)
+
+    this.render()
+  }
+
+  async removeProduct (id) {
+    this.data = this.data.filter(product => product.id !== id)
+    this.render()
+
+    // store.dispatch(removeProduct({ id }))
   }
 }
 

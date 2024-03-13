@@ -1,3 +1,6 @@
+import { store } from '../redux/store.js'
+import { addProduct } from '../redux/cart-slice.js'
+
 class PlusMinusButton extends HTMLElement {
   constructor () {
     super()
@@ -5,6 +8,7 @@ class PlusMinusButton extends HTMLElement {
   }
 
   connectedCallback () {
+    this.productId = this.getAttribute('product-id')
     this.render()
   }
 
@@ -12,36 +16,36 @@ class PlusMinusButton extends HTMLElement {
     this.shadow.innerHTML =
       /* html */`
         <style>
-          .cart-products-buttons{
+          .plus-minus-button{
             height: 1.5rem;
           }
 
-          .cart-products-buttons input{
+          .plus-minus-button input{
             border: none;
             outline: none;
             height: 100%;
             width: 25px;
           }
 
-          .cart-products-buttons-reduce{
+          .plus-minus-button-reduce{
             background-color: hsl(0, 73%, 58%);
             border: none;
             width: 25px;
             cursor: pointer;
           }
           
-          .cart-products-buttons-reduce button{
+          .plus-minus-button-reduce button{
             border-radius: 1rem;
           }
 
-          .cart-products-buttons-add{
+          .plus-minus-button-add{
             background-color: hsl(120, 80%, 32%);
             border: none;
             width: 25px;
             cursor: pointer;
           }
 
-          .cart-products-title-button{
+          .plus-minus-title-utton{
             padding: 0 0.5rem;
             flex-grow: 3;
           }
@@ -57,26 +61,39 @@ class PlusMinusButton extends HTMLElement {
           }
         </style>
 
-        <div class="cart-products-buttons">
-          <button class="cart-products-buttons-reduce">-</button>
-          <input type="number" value="1">
-          <button class="cart-products-buttons-add">+</button>
+        <div class="plus-minus-button">
+          <button class="plus-minus-button-reduce">-</button>
+          <input class="plus-minus-button-input" type="number" value="1">
+          <button class="plus-minus-button-add">+</button>
         </div>
       `
-    const buttonReduce = this.shadow.querySelector('.cart-products-buttons-reduce')
-    const input = this.shadow.querySelector('input[type="number"]')
-    const buttonAdd = this.shadow.querySelector('.cart-products-buttons-add')
 
-    buttonReduce.addEventListener('click', () => {
-      const currentValue = parseInt(input.value, 10)
-      if (currentValue > 0) {
-        input.value = currentValue - 1
+    const plusMinusButton = this.shadow.querySelector('.plus-minus-button')
+    const quantity = this.shadow.querySelector('.plus-minus-button-input')
+
+    plusMinusButton.addEventListener('click', event => {
+      if (event.target.closest('.plus-minus-button-reduce')) {
+        const currentValue = parseInt(quantity.value)
+
+        if (currentValue > 0) {
+          quantity.value = currentValue - 1
+
+          store.dispatch(addProduct({
+            id: this.productId,
+            quantity: parseInt(quantity.value)
+          }))
+        }
       }
-    })
 
-    buttonAdd.addEventListener('click', () => {
-      const currentValue = parseInt(input.value, 10)
-      input.value = currentValue + 1
+      if (event.target.closest('.plus-minus-button-add')) {
+        const currentValue = parseInt(quantity.value)
+        quantity.value = currentValue + 1
+
+        store.dispatch(addProduct({
+          id: this.productId,
+          quantity: parseInt(quantity.value)
+        }))
+      }
     })
   }
 }

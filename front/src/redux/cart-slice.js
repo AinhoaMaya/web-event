@@ -7,10 +7,21 @@ export const cartSlice = createSlice({
   },
   reducers: {
     addProduct: (state, action) => {
+      const product = state.cartProducts.some(product => product.id === action.payload.id)
 
+      if (!product) {
+        state.cartProducts.push(action.payload)
+      } else {
+        state.cartProducts = state.cartProducts.map(product => {
+          if (product.id === action.payload.id) {
+            product.quantity = action.payload.quantity
+          }
+          return product
+        })
+      }
     },
     removeProduct: (state, action) => {
-
+      state.cartProducts = state.cartProducts.filter(product => product.id !== action.payload.id)
     }
   }
 })

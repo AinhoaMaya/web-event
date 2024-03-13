@@ -155,11 +155,33 @@ class AddButton extends HTMLElement {
   }
 
   addElement () {
-    console.log(this.productId)
+    const product = {
+      id: this.productId,
+      quantity: 1
+    }
+
+    store.dispatch(addProduct(product))
+
+    document.dispatchEvent(new CustomEvent('message', {
+      detail: {
+        text: 'Se ha añadido la actividad al carrito'
+      }
+    }))
   }
 
   removeElement () {
+    const product = {
+      id: this.productId,
+      quantity: 1
+    }
 
+    store.dispatch(addProduct(product))
+
+    document.dispatchEvent(new CustomEvent('message', {
+      detail: {
+        text: 'Se ha removido la actividad al carrito'
+      }
+    }))
   }
 }
 
