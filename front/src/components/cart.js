@@ -13,14 +13,23 @@ class Cart extends HTMLElement {
     this.unsubscribe = store.subscribe(() => {
       const currentState = store.getState()
 
-      console.log(currentState.cart.cartProducts)
-
       if (currentState.cart.cartProducts.length > this.data.length) {
         currentState.cart.cartProducts.forEach(async product => {
           const cartProduct = this.data.some(cartProduct => cartProduct.id === product.id)
 
           if (!cartProduct) {
             await this.addProduct(product.id)
+          }
+        })
+      }
+
+      if (currentState.cart.cartProducts.length < this.data.length) {
+        this.data.forEach(async product => {
+          const cartProduct = currentState.cart.cartProducts.some(cartProduct => cartProduct.id === product.id)
+
+          if (!cartProduct) {
+            this.data = this.data.filter(cartProduct => cartProduct.id !== product.id)
+            this.render()
           }
         })
       }
@@ -351,9 +360,10 @@ class Cart extends HTMLElement {
 
   async removeProduct (id) {
     this.data = this.data.filter(product => product.id !== id)
-    this.render()
 
-    // store.dispatch(removeProduct({ id }))
+    store.dispatch(removeProduct({ id }))
+
+    this.render()
   }
 }
 

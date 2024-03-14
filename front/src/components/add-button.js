@@ -5,11 +5,21 @@ class AddButton extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
-    this.orientation = this.getAttribute('orientation')
+    this.unsubscribe = null
   }
 
   connectedCallback () {
     this.productId = this.getAttribute('product-id')
+
+    this.unsubscribe = store.subscribe(() => {
+      const currentState = store.getState()
+      const addButton = this.shadow.querySelector('.add-button')
+
+      if (!currentState.cart.cartProducts.some(product => product.id === this.productId)) {
+        addButton.classList.remove('active')
+      }
+    })
+
     this.render()
   }
 
@@ -171,11 +181,10 @@ class AddButton extends HTMLElement {
 
   removeElement () {
     const product = {
-      id: this.productId,
-      quantity: 1
+      id: this.productId
     }
 
-    store.dispatch(addProduct(product))
+    store.dispatch(removeProduct(product))
 
     document.dispatchEvent(new CustomEvent('message', {
       detail: {
