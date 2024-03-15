@@ -29,7 +29,12 @@ class Cart extends HTMLElement {
 
           if (!cartProduct) {
             this.data = this.data.filter(cartProduct => cartProduct.id !== product.id)
-            this.render()
+
+            if (this.shadow.querySelector('.cart').classList.contains('active')) {
+              this.render('active')
+            } else {
+              this.render()
+            }
           }
         })
       }
@@ -44,7 +49,7 @@ class Cart extends HTMLElement {
     this.data = await response.json()
   }
 
-  render () {
+  render (state = null) {
     this.shadow.innerHTML =
       /* html */`
         <style>
@@ -209,7 +214,7 @@ class Cart extends HTMLElement {
           </button>
         </div>
 
-        <div class="cart">
+        <div class="cart ${state}">
           <div class="cart-header">
             <div class="cart-header-text">
               <h2>Tu horario para el evento</h2>
@@ -339,8 +344,6 @@ class Cart extends HTMLElement {
         cart.classList.remove('active')
       }
 
-      // const productId = this.shadow.querySelector(id)
-
       if (event.target.closest('.cart-products-button-remove')) {
         const productElement = event.target.closest('.cart-products-button-remove')
         const productId = productElement.dataset.id
@@ -355,7 +358,11 @@ class Cart extends HTMLElement {
     const product = await response.json()
     this.data.push(product)
 
-    this.render()
+    if (this.shadow.querySelector('.cart').classList.contains('active')) {
+      this.render('active')
+    } else {
+      this.render()
+    }
   }
 
   async removeProduct (id) {
@@ -363,7 +370,11 @@ class Cart extends HTMLElement {
 
     store.dispatch(removeProduct({ id }))
 
-    this.render()
+    if (this.shadow.querySelector('.cart').classList.contains('active')) {
+      this.render('active')
+    } else {
+      this.render()
+    }
   }
 }
 

@@ -1,3 +1,5 @@
+import { store } from '../redux/store.js'
+
 class Checkout extends HTMLElement {
   constructor () {
     super()
@@ -161,6 +163,7 @@ class Checkout extends HTMLElement {
 
     const formData = new FormData(form)
     const formDataJson = Object.fromEntries(formData.entries())
+    formDataJson.products = store.getState().cart.cartProducts
 
     console.log(formDataJson)
 
