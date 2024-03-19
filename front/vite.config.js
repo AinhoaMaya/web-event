@@ -3,7 +3,7 @@ const { defineConfig } = require('vite')
 export default defineConfig({
   base: './',
   server: {
-    port: 5500
+    port: 5173
   },
   build: {
     outDir: 'dist',
